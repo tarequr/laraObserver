@@ -11,8 +11,6 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
@@ -30,43 +28,9 @@
             @endif
 
             <!-- Page Content -->
-            {{-- <div>
-                <h2>hello</h2>
-            </div> --}}
-
-            <div class="container p-4">
-                <div>
-                    <button class="btn btn-sm btn-success float-right">Add Blog</button>
-                </div>
-
-                <div class="pt-5">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>SL</th>
-                                <th>SL</th>
-                                <th>SL</th>
-                                <th>SL</th>
-                                <th>SL</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>SL</td>
-                                <td>SL</td>
-                                <td>SL</td>
-                                <td>SL</td>
-                                <td>SL</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            {{-- <main>
+            <main>
                 {{ $slot }}
-            </main> --}}
+            </main>
         </div>
-
-        {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> --}}
     </body>
 </html>

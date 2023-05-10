@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class DashboarController extends Controller
 {
     public function dashboard()
     {
-        return view('dashboard');
+        $blogs = Blog::all();
+        return view('blog.index', compact('blogs'));
+    }
+
+    public function store(Request $request)
+    {
+        # code...
     }
 }
