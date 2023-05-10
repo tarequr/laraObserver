@@ -15,6 +15,14 @@ class DashboarController extends Controller
 
     public function store(Request $request)
     {
-        # code...
+
+        // dd('hello');
+
+        Blog::create([
+            'title' => $request->title,
+            'description' => $request->description
+        ]);
+
+        return back();
     }
 }
