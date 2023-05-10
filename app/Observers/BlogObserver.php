@@ -3,6 +3,8 @@
 namespace App\Observers;
 
 use App\Models\Blog;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class BlogObserver
 {
@@ -11,7 +13,10 @@ class BlogObserver
      */
     public function created(Blog $blog): void
     {
-        //
+        $blog->slug = Str::slug($blog->title);
+        $blog->published_at = date('Y-m-d');
+        $blog->author_by = Auth::id();
+        $blog->save();
     }
 
     /**

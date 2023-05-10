@@ -29,20 +29,22 @@
                     <thead>
                         <tr>
                             <th>SL</th>
-                            <th>SL</th>
-                            <th>SL</th>
-                            <th>SL</th>
-                            <th>SL</th>
+                            <th>Title</th>
+                            <th>Slug</th>
+                            <th>Description</th>
+                            <th>Published At</th>
+                            <th>Author By</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($blogs as $blog)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>SL</td>
-                                <td>SL</td>
-                                <td>SL</td>
-                                <td>SL</td>
+                                <td>{{ $blog->title }}</td>
+                                <td>{{ $blog->slug }}</td>
+                                <td>{{ $blog->description }}</td>
+                                <td>{{ date('d-M-Y', strtotime($blog->published_at)) }}</td>
+                                <td>{{ $blog->user->name }}</td>
                             </tr>
                         @endforeach
                     </tbody>

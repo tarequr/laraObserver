@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class DashboarController extends Controller
@@ -15,9 +16,6 @@ class DashboarController extends Controller
 
     public function store(Request $request)
     {
-
-        // dd('hello');
-
         Blog::create([
             'title' => $request->title,
             'description' => $request->description
